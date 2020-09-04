@@ -67,4 +67,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 <h1> NUCLIO DIGITAL SCHOOL</h1>
-<p> Hola</p>
+<p> Hola Facundo</p>
