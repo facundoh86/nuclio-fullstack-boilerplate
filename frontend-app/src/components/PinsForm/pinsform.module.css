@@ -1,0 +1,33 @@
+.__container{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin: 50px auto;
+    background-color: deepskyblue;
+    border-radius: 15px;
+
+}
+
+.__input{
+
+    font-size: 15px;
+    margin: 10px;
+
+}
+
+.__label{
+    padding: 4px;
+    text-align: center;
+}
+.__button{
+    outline: none;
+    height: 25px;
+    width: 280px;
+    margin: 5px auto;
+    border-radius: 10px;
+}

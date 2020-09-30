@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Home from "./pages/home/home.view";
+import ListPins from './components/ListPins/ListPins.view'
+import PinsForm from "./components/PinsForm/pinsform.view";
+import BoardForm from "./components/BoardForm/BoardForm.view";
+import Navbar from "./components/Navbar/navbar.view";
+import {BrowserRouter as Router,
+    Switch,
+    Route,
+    Link, } from "react-router-dom";
+import {LIST_PINS} from "./Routes/Routes";
+import LoginForm from "./components/LoginForm/loginForm.view";
+import RegisterForm from "./components/RegisterForm/RegisterForm.view";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+
+          <div className="App">
+                <LoginForm />
+          </div>
+
   );
 }
 
