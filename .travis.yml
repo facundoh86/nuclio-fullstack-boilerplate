@@ -7,11 +7,8 @@ before_script:
   - cd backend-api
   - touch database/test.sqlite
   - cp .env.travis .env
-  - mysql -e 'create database laravel_test;'
   - composer self-update
   - composer install --no-interaction
-  - php artisan key:generate
-  # - php artisan migrate
   - if find . -name ".php" ! -path "./vendor/" -exec php -l {} 2>&1 \; | grep "syntax error, unexpected"; then exit 1; fi
 script:
   - vendor/bin/phpunit

@@ -13,6 +13,7 @@ storage/*.key
 .env.*.php
 .env.php
 .env
+.env.development
 Homestead.yaml
 Homestead.json
 
@@ -21,3 +22,5 @@ Homestead.json
 
 # IDE files
 .idea/
+
+backend-api/dbdata/*

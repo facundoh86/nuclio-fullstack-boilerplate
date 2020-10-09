@@ -2,12 +2,12 @@ version: '3'
 services:
 
   #PHP Service
-  app:
+  App:
     build:
       context: .
       dockerfile: Dockerfile
     image: nuclio-php-image/php
-    container_name: app
+    container_name: App
     restart: unless-stopped
     tty: true
     environment:
@@ -21,9 +21,9 @@ services:
       - app-network
 
   #Nginx Service
-  webserver:
+  WebServer:
     image: nginx:alpine
-    container_name: webserver
+    container_name: WebServer
     restart: unless-stopped
     tty: true
     ports:
@@ -36,20 +36,20 @@ services:
       - app-network
 
   #MySQL Service
-  db:
+  DB:
     image: mysql:5.7.22
-    container_name: db
+    container_name: DB
     restart: unless-stopped
     tty: true
     ports:
       - "3306:3306"
     environment:
-      MYSQL_DATABASE: laravel
-      MYSQL_ROOT_PASSWORD: your_mysql_root_password
+      MYSQL_DATABASE: picturest
+      MYSQL_ROOT_PASSWORD: feh2303
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     volumes:
-      - dbdata:/var/lib/mysql/
+      - ./dbdata:/var/lib/mysql/
       - ./mysql/my.cnf:/etc/mysql/my.cnf
     networks:
       - app-network
